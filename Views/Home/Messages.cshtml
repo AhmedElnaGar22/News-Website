@@ -1,0 +1,28 @@
+﻿@model List<ContactUS>
+
+<section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>آراء المستخدمين</h2>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" role="group" aria-label="1 / 5" style=" align-content:center" data-swiper-slide-index="0">
+                <div class="testimonial-item">
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                         @item.Message
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="~/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                    <h3>@item.Name</h3>
+                    <h4>@item.Email</h4>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</section>
